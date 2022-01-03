@@ -1,0 +1,30 @@
+
+    <a href="/">
+        <i class="far fa-calendar-check"></i>
+        Pomofocus
+    </a>
+    <div class="option_container">
+        <a href="/report">
+            <i class="fas fa-book"></i>
+            Report
+        </a>
+        <a href="/setting">
+            <i class="fas fa-cogs"></i>
+            Setting
+        </a>
+        <% if (locals.UserName != null) { %>
+            <a href="/">
+                <i class="fas fa-user"></i>
+                <%=UserName%>
+            </a>
+        <% }else{ %>
+            <a href="/register">
+                <i class="fas fa-pencil-alt"></i>
+                Register
+            </a>
+            <a href="/login">
+                <i class="far fa-user"></i>
+                Login
+            </a>
+        <% } %>
+    </div>    

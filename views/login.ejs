@@ -1,0 +1,38 @@
+<form action = "/login" style="background-color: transparent;" method="POST">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;background-color: rgb(255, 255, 255);">
+            <div class="card-body p-5 text-center">
+  
+              <h3 class="mb-5">Sign in</h3>
+              <div class="text-center" style="color: red;font-size: 1.5rem;">
+                <% if (locals.errorMessage != null) { %>
+                  <%= errorMessage %>
+                  <i class="fas fa-exclamation"></i>
+                <% } %>
+              </div>
+              <div class="text-center" style="color: rgb(19, 180, 92);font-size: 1.5rem;">
+                <% if (locals.success != null) { %>
+                  <%= success %>
+                  <i class="fas fa-kiss-wink-heart"></i>
+                <% } %>
+              </div>
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typeEmailX-2">User Name</label>
+                <input type="text" id="typeEmailX-2" class="form-control form-control-lg" name="UserName"/>
+              </div>
+  
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typePasswordX-2">Password</label>
+                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" name="Password"/>
+              </div>
+  
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+              <button class="btn btn-primary btn-lg btn-block"><a href="/register" style="color: white; text-decoration: none;">Register</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>

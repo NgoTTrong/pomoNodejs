@@ -1,0 +1,265 @@
+:root{
+    --size: 1.2rem;
+    --color: #1f1313;
+    --font: "Trebuchet MS";
+    --font-weight: 600;
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Header */
+header{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    flex:1;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+header a{
+    background-color: transparent;
+    padding: 0.2rem 1rem;
+    text-decoration: none;
+    border: solid black 2px;
+    color: var(--color);
+    font-size: var(--size);
+    font-family: var(--font);
+    font-weight: var(--font-weight);
+}
+header a:hover{
+    background-color: #339774;
+    border-radius: 1rem;
+}
+header .option_container{
+    display: flex;
+}
+header .option_container a{
+    padding: 0 3rem;
+    margin: 0 1rem;
+    text-decoration: none;
+    background-color: transparent;
+    border: solid 2px black;
+}
+header .option_container a:hover{
+    background-color: #339774;
+    border-radius: 1rem;
+}
+/*Main*/
+.bodyPart{
+    flex:12;
+    margin-top: 5rem;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 25rem;
+}
+
+.main .containerMain{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 1rem;
+    border: solid 2px black;
+    padding: 2rem 0;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+.main .containerMain .selection span{
+    margin: 0 2rem;
+    color: var(--color);
+    font-size: var(--size);
+    font-weight: var(--font-weight);
+    font-family: var(--font);
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+    border: black solid 2px;
+}
+.main .containerMain .selection span:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    color: rgb(253, 253, 253);
+    background-color: rgb(218, 163, 163);
+}
+.main .containerMain .selection .active{
+    background-color: rgb(218, 163, 163);
+}
+
+.main .containerMain .clock{
+    margin: 2rem 2rem;
+    color: var(--color);
+    font-size: calc(var(--size)*3);
+    font-weight: var(--font-weight);
+    font-family: var(--font);
+    border: solid black 2px;
+}
+.main .containerMain .clock span{
+    margin: 0 2rem;
+}
+.main .containerMain .buttons{
+    display: flex;
+}
+.main .containerMain .buttons .button{
+    color: var(--color);
+    margin: 0 1rem;
+    font-size: calc(var(--size));
+    font-weight: var(--font-weight);
+    font-family: var(--font);
+    background-color: transparent;
+    border: solid black 2px;
+    padding: 0.4rem 2rem;
+    border-radius: 1rem;
+}
+.main .containerMain .button:hover{
+    opacity: 0.7;
+    padding: 0.5rem 2rem;
+    color: rgb(253, 253, 253);
+    cursor: pointer;
+}
+.main .taskBox{
+    margin-top: 1rem;
+}
+.main .taskBox .activity{
+    color: var(--color);
+    font-size: calc(var(--size)*2.5);
+    font-weight: var(--font-weight);
+    font-family: var(--font);
+}
+.main .taskBox .addTask{
+    color: var(--color);
+    font-size: calc(var(--size));
+    font-weight: var(--font-weight);
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+    border: dashed 2px black;
+    border-radius: 1rem;
+}
+.main .taskBox .addTask:hover{
+    padding: 1.1rem 0;
+    opacity: 0.7;
+    cursor: pointer;
+    color: rgb(253, 253, 253);
+}
+.main .taskBox .innerTask{
+    color: var(--color);
+    font-size: calc(var(--size));
+    font-weight: var(--font-weight);
+    font-family: var(--font);
+    width: 100%;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+}
+.main .taskBox .innerTask.visible{
+    display: none;
+}
+
+.main .taskBox .listTask{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: transparent;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+.main .taskBox .listTask .task{
+    color: var(--color);
+    font-size: calc(var(--size));
+    font-weight: var(--font-weight);
+    font-family: var(--font);
+}
+.main .taskBox .listTask .task{
+    display: flex;
+    justify-items: space-between;
+    align-items: center;
+    margin: 0.3rem 0;
+    border: dashed black 2px;
+}
+.main .taskBox .listTask .work{
+    flex: 1;
+}
+.main .taskBox .listTask input{
+    margin: 0 0.5rem;
+}
+.main .taskBox .listTask .delete{
+    margin: 0 0.5rem;
+}
+.main .taskBox .listTask .task .delete:hover{
+    color: rgb(253, 253, 253);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.main .taskBox .listTask .task input{
+    height: 1.3rem;
+    width: 1.3rem;
+    background-color: #eee;
+    cursor: pointer;
+}
+/* Footer */
+footer { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex:1;
+    background-color: transparent;
+    position: relative;
+    padding: 0 3rem; 
+    bottom:0px;
+    left: 0px;
+}
+footer a{
+    text-decoration: none;
+    color: var(--color);
+    font-size: calc(var(--size)*1.5);
+    font-family: var(--font);
+    font-weight: var(--font-weight);
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+}
+footer a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer a p{
+    font-size: calc(var(--size)/1.5);
+}
